@@ -5,7 +5,7 @@ on:
     branch: [main]
   workflow_dispatch:
 
-permission:
+permissions:
   pages: write
   id-token: write
 
@@ -16,7 +16,7 @@ concurrency:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    envrionment:
+    environment:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
 
