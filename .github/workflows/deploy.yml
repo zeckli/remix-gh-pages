@@ -28,21 +28,8 @@ jobs:
           version: 8
           run_install: true
 
-      #- shell: bash
-      #  run: |
-      #    echo "STORE_PATH=$(pnpm store path --silent)" >> $GITHUB_ENV
-      #
-      #- uses: actions/cache@v3
-      #  with:
-      #    path: ${{ env.STORE_PATH }}
-      #    key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-      #    restore-keys: |
-      #      ${{ runner.os }}-pnpm-store-
-
       - uses: actions/configure-pages@v4
 
-      #- run: pnpm install
-      
       - run: pnpm build
       
       - uses: actions/upload-pages-artifact@v3
