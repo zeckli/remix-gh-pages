@@ -6,7 +6,7 @@ export const links = () => {
   return [{ rel: 'stylesheet', href: rootCss }]
 }
 
-const App = () => {
+export const Layout = ({ children }) => {
   return (
     <html lang="en">
       <head>
@@ -15,11 +15,26 @@ const App = () => {
         <Links />
       </head>
       <body className="grid center">
-        <Outlet />
+        {children}
         <Scripts />
       </body>
-    </html>   
+    </html>
   )
 }
+
+export const HydrateFallback = () => {
+  return (
+    <section className="pb-10">
+      <p className="emogi">💾</p>
+      <br/>
+      <p>Remix App is loading ...</p>
+    </section>
+  )
+}
+
+const App = () => {
+  return <Outlet />
+}
+
 export default App
 
