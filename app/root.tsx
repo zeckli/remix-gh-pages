@@ -25,7 +25,7 @@ export const Layout = ({ children }) => {
 export const HydrateFallback = () => {
   return (
     <section className="pb-10">
-      <p className="emogi">💾</p>
+      <p className="emoji">💾</p>
       <br/>
       <p>Remix App is loading ...</p>
     </section>
