@@ -4,8 +4,7 @@
 
 @layer base {
   html, body {
-    @apply m-0 p-0 w-full h-full;
-    background-color: #434343;
+    @apply m-0 p-0 w-full h-full bg-[#434343];
     background-image: linear-gradient(#5480D3, #3256A7);
     font-family: system-ui Helvetica, sans-serif, apple color emoji;
   }
@@ -23,11 +22,19 @@
     background-size: 25px 25px;
   }
 
-  .center {
-    @apply flex items-center justify-center;
+  .emoji {
+    @apply py-4 text-8xl;
   }
 
-  .emoji {
-    @apply pb-4 text-8xl;
+  .info {
+    @apply block;
+    @apply py-8 text-center text-base text-white opacity-80;
+    @apply underline hover:opacity-100;
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
   }
 }
