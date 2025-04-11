@@ -12,12 +12,12 @@ export default defineConfig({
     remix({
       basename: repo,
       ssr: false,
-      buildEnd({ viteConfig }) {
-        if (!viteConfig.isProduction) {
+      buildEnd(args) {
+        if (!args.viteConfig.isProduction) {
           return
         }
 
-        const buildPath = viteConfig.build.outDir
+        const buildPath = args.viteConfig.build.outDir
         copyFileSync(
           join(buildPath, 'index.html'),
           join(buildPath, '404.html'),
