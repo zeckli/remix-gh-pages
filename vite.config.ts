@@ -17,10 +17,10 @@ export default defineConfig({
           return
         }
 
-        const buildPath = viteConfig.build.outDir
+        const path = viteConfig.build.outDir
         copyFileSync(
-          join(buildPath, 'index.html'),
-          join(buildPath, '404.html'),
+          join(path, 'index.html'),
+          join(path, '404.html'),
         )
       }
     }),
