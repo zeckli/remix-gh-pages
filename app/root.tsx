@@ -6,7 +6,7 @@ export const links = () => {
   return [{ rel: 'stylesheet', href: rootCss }]
 }
 
-export const Layout = ({ children }) => {
+export const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html lang="en">
       <head>
