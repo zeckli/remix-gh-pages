@@ -27,7 +27,7 @@
     @apply py-4 text-8xl;
   }
 
-  .info {
+  .note {
     @apply block;
     @apply py-8 text-center text-base text-white opacity-80;
     @apply underline hover:opacity-100;

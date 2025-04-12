@@ -1,13 +1,13 @@
-const Info = () => {
+const Note = () => {
   return (
     <a
-      className="info"
+      className="note"
       href="https://zeckli.dev/notes/deploy-remix-app-to-github-pages"
       target="_blank"
     >
-      Go to the note for deploying Remix App to Github Pages.
+      Read the note on deploying Remix App to Github Pages.
     </a>
   )
 }
 
-export default Info
+export default Note
