@@ -2,7 +2,7 @@ import Note from '../../components/Note'
 
 const IndexPage = () => {
   return (
-    <section className="pb-10">
+    <section>
       <p className="emoji">😉</p>
       <p>You're in the index page.</p>
       <Note />

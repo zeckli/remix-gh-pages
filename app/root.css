@@ -9,18 +9,34 @@
     font-family: system-ui Helvetica, sans-serif, apple color emoji;
   }
 
+  main {
+    @apply pt-20 center;
+  }
+
   p {
     @apply text-center text-3xl text-white font-semibold;
   }
 }
 
 @layer components {
-  .grid {
+  .deco {
     @apply px-4;
     background: 
       linear-gradient(to right, rgba(255,255,255,0.15) 1px, transparent 1px),
       linear-gradient(to bottom, rgba(255,255,255,0.15) 1px, transparent 1px);
     background-size: 25px 25px;
+  }
+
+  .menu {
+    @apply py-4 center text-xl text-white;
+
+    > a {
+      @apply hover:underline underline-offset-4;
+    }
+
+    > a:nth-child(2) {
+      @apply px-8;
+    }
   }
 
   .emoji {
